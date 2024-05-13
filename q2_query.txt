@@ -1,0 +1,9 @@
+SELECT DISTINCT ?individual ?gender ?age ?name ?nationality
+    WHERE {
+        ?individual rdf:type ?type .
+        FILTER(?type = ontology_ns:Actor || ?type = ontology_ns:Writer || ?type = ontology_ns:Director) .
+        OPTIONAL { ?individual ontology_ns:hasGender ?gender }
+        OPTIONAL { ?individual ontology_ns:hasAge ?age }
+        OPTIONAL { ?individual ontology_ns:hasName ?name }
+        OPTIONAL { ?individual ontology_ns:hasNationality ?nationality }
+    }

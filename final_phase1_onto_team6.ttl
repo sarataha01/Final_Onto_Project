@@ -1,0 +1,447 @@
+@prefix : <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2#> .
+
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasActor
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasActor> rdf:type owl:ObjectProperty ;
+                                                                                   owl:inverseOf <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/isActorOf> ;
+                                                                                   rdf:type owl:AsymmetricProperty ;
+                                                                                   rdfs:domain <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Movies> ;
+                                                                                   rdfs:range <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Actor> .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasDirector
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasDirector> rdf:type owl:ObjectProperty ;
+                                                                                      owl:inverseOf <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/isDirectorOf> ;
+                                                                                      rdf:type owl:AsymmetricProperty ;
+                                                                                      rdfs:domain <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Movies> ;
+                                                                                      rdfs:range <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Director> .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasGender
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasGender> rdf:type owl:ObjectProperty ,
+                                                                                             owl:FunctionalProperty ,
+                                                                                             owl:AsymmetricProperty ;
+                                                                                    rdfs:domain <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Persons> ;
+                                                                                    rdfs:range <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Gender> .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasGenre
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasGenre> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:domain <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Movies> ;
+                                                                                   rdfs:range <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Genre> .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasWriter
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasWriter> rdf:type owl:ObjectProperty ;
+                                                                                    owl:inverseOf <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/isWriterOf> ;
+                                                                                    rdf:type owl:AsymmetricProperty ;
+                                                                                    rdfs:domain <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Movies> ;
+                                                                                    rdfs:range <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Writer> .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/isActorOf
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/isActorOf> rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/isDirectorOf
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/isDirectorOf> rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/isWriterOf
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/isWriterOf> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasAge
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasAge> rdf:type owl:DatatypeProperty ,
+                                                                                          owl:FunctionalProperty ;
+                                                                                 rdfs:domain <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Persons> ;
+                                                                                 rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasCountry
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasCountry> rdf:type owl:DatatypeProperty ;
+                                                                                     rdfs:domain <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Movies> ;
+                                                                                     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasLanguage
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasLanguage> rdf:type owl:DatatypeProperty ;
+                                                                                      rdfs:domain <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Movies> ;
+                                                                                      rdfs:range xsd:language .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasName
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasName> rdf:type owl:DatatypeProperty ,
+                                                                                           owl:FunctionalProperty ;
+                                                                                  rdfs:domain <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Persons> ;
+                                                                                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasNationality
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasNationality> rdf:type owl:DatatypeProperty ;
+                                                                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                         rdfs:domain <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Persons> ;
+                                                                                         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasTitle
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasTitle> rdf:type owl:DatatypeProperty ,
+                                                                                            owl:FunctionalProperty ;
+                                                                                   rdfs:domain <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Movies> ;
+                                                                                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasYear
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasYear> rdf:type owl:DatatypeProperty ,
+                                                                                           owl:FunctionalProperty ;
+                                                                                  rdfs:domain <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Movies> ;
+                                                                                  rdfs:range xsd:int .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Actor
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Actor> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Persons> .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Director
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Director> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Persons> .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Gender
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Gender> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Genre
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Genre> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Movies
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Movies> rdf:type owl:Class ;
+                                                                                 owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasActor> ;
+                                                                                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                       owl:onClass <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Actor>
+                                                                                                     ] ,
+                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasDirector> ;
+                                                                                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                       owl:onClass <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Director>
+                                                                                                     ] ,
+                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasWriter> ;
+                                                                                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                       owl:onClass <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Writer>
+                                                                                                     ] .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Persons
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Persons> rdf:type owl:Class ;
+                                                                                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasGender> ;
+                                                                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                        owl:onClass <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Gender>
+                                                                                                      ] .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Writer
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Writer> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Persons> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Action
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Action> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Genre> .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Casino
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Casino> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Movies> ;
+                                                                                 <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasActor> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Christopher_Nolan> ;
+                                                                                 <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasDirector> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Christopher_Nolan> ;
+                                                                                 <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasGenre> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Crime> ,
+                                                                                                                                                                    <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Thriller> ;
+                                                                                 <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasWriter> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Coen_Brothers> ;
+                                                                                 <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasCountry> "Egypt" ;
+                                                                                 <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasLanguage> "ar"^^xsd:language ;
+                                                                                 <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasTitle> "Casino" ;
+                                                                                 <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasYear> "2000"^^xsd:int .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Christopher_Nolan
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Christopher_Nolan> rdf:type owl:NamedIndividual ,
+                                                                                                     <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Actor> ,
+                                                                                                     <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Director> ;
+                                                                                            <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasGender> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Male> ;
+                                                                                            <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasAge> "56"^^xsd:int ;
+                                                                                            <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasName> "Christopher Nolan" ;
+                                                                                            <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasNationality> "American" .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Coen_Brothers
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Coen_Brothers> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Writer> ;
+                                                                                        <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasGender> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Male> ;
+                                                                                        <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasAge> "67"^^xsd:int ;
+                                                                                        <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasName> "Joel and Ethan" ;
+                                                                                        <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasNationality> "German" .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Comedy
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Comedy> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Genre> .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Crime
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Crime> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Genre> .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Drama
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Drama> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Genre> .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Female
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Female> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Gender> .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Fight_Club
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Fight_Club> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Movies> ;
+                                                                                     <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasActor> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/George_Lucas> ;
+                                                                                     <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasDirector> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Ridley_Scott> ;
+                                                                                     <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasGenre> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Comedy> ,
+                                                                                                                                                                        <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Crime> ,
+                                                                                                                                                                        <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Thriller> ;
+                                                                                     <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasWriter> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Sofia_Coppola> ;
+                                                                                     <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasCountry> "United States" ;
+                                                                                     <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasLanguage> "en"^^xsd:language ;
+                                                                                     <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasTitle> "Fight Club" ;
+                                                                                     <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasYear> "2016"^^xsd:int .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/George_Lucas
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/George_Lucas> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Actor> ,
+                                                                                                <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Writer> ;
+                                                                                       <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasGender> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Male> ;
+                                                                                       <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasAge> "72"^^xsd:int ;
+                                                                                       <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasName> "George Lucas" ;
+                                                                                       <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasNationality> "German" .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Good_Fellas
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Good_Fellas> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Movies> ;
+                                                                                      <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasActor> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Sofia_Coppola> ;
+                                                                                      <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasDirector> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Sofia_Coppola> ;
+                                                                                      <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasGenre> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Action> ,
+                                                                                                                                                                         <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Thriller> ;
+                                                                                      <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasWriter> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Sofia_Coppola> ;
+                                                                                      <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasCountry> "England" ;
+                                                                                      <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasLanguage> "en"^^xsd:language ;
+                                                                                      <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasTitle> "Good Fellas" ;
+                                                                                      <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasYear> "2005"^^xsd:int .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Heat
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Heat> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Movies> ;
+                                                                               <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasActor> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Tim_Burton> ;
+                                                                               <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasDirector> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Sofia_Coppola> ;
+                                                                               <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasGenre> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Action> ,
+                                                                                                                                                                  <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Crime> ,
+                                                                                                                                                                  <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Thriller> ;
+                                                                               <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasWriter> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Sofia_Coppola> ;
+                                                                               <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasCountry> "Japan" ;
+                                                                               <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasLanguage> "jp"^^xsd:language ;
+                                                                               <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasTitle> "Heat" ;
+                                                                               <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasYear> 2020 .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Inception
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Inception> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Movies> ;
+                                                                                    <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasActor> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/George_Lucas> ;
+                                                                                    <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasDirector> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Ridley_Scott> ;
+                                                                                    <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasGenre> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Action> ,
+                                                                                                                                                                       <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Drama> ;
+                                                                                    <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasWriter> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/George_Lucas> ;
+                                                                                    <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasCountry> "United States" ;
+                                                                                    <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasLanguage> "en"^^xsd:language ;
+                                                                                    <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasTitle> "Inception" ;
+                                                                                    <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasYear> "2001"^^xsd:int .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/James_Cameron
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/James_Cameron> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Director> ;
+                                                                                        <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasGender> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Male> ;
+                                                                                        <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasAge> "36"^^xsd:int ;
+                                                                                        <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasName> "James Cameron" ;
+                                                                                        <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasNationality> "American" .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Male
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Male> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Gender> .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Martin_Scorsese
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Martin_Scorsese> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Writer> ;
+                                                                                          <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasGender> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Male> ;
+                                                                                          <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasAge> "65"^^xsd:int ;
+                                                                                          <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasName> "Martin Scorsese" ;
+                                                                                          <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasNationality> "Polish" .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Reservoir_Dogs
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Reservoir_Dogs> rdf:type owl:NamedIndividual ,
+                                                                                                  <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Movies> ;
+                                                                                         <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasActor> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Sofia_Coppola> ;
+                                                                                         <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasDirector> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/James_Cameron> ;
+                                                                                         <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasGenre> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Comedy> ,
+                                                                                                                                                                            <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Drama> ;
+                                                                                         <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasWriter> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Martin_Scorsese> ;
+                                                                                         <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasCountry> "India" ;
+                                                                                         <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasLanguage> "In"^^xsd:language ;
+                                                                                         <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasTitle> "Reservoir Dogs" ;
+                                                                                         <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasYear> "2020"^^xsd:int .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Ridley_Scott
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Ridley_Scott> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Director> ;
+                                                                                       <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasGender> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Male> ;
+                                                                                       <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasAge> "37"^^xsd:int ;
+                                                                                       <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasName> "Ridley Scott" ;
+                                                                                       <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasNationality> "Swiss" .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Seven
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Seven> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Movies> ;
+                                                                                <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasActor> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/George_Lucas> ;
+                                                                                <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasDirector> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Christopher_Nolan> ;
+                                                                                <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasGenre> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Action> ,
+                                                                                                                                                                   <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Comedy> ,
+                                                                                                                                                                   <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Thriller> ;
+                                                                                <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasWriter> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/George_Lucas> ;
+                                                                                <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasCountry> "China" ;
+                                                                                <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasLanguage> "Mandrian"^^xsd:language ;
+                                                                                <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasTitle> "Seven" ;
+                                                                                <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasYear> "2001"^^xsd:int .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Sofia_Coppola
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Sofia_Coppola> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Actor> ,
+                                                                                                 <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Director> ,
+                                                                                                 <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Writer> ;
+                                                                                        <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasGender> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Female> ;
+                                                                                        <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasAge> "45"^^xsd:int ;
+                                                                                        <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasName> "Sofia Coppola" ;
+                                                                                        <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasNationality> "Irish" .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Steven_Speillberg
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Steven_Speillberg> rdf:type owl:NamedIndividual ,
+                                                                                                     <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Director> ;
+                                                                                            <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasGender> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Male> ;
+                                                                                            <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasAge> "65"^^xsd:int ;
+                                                                                            <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasName> "Steven Speillberg" ;
+                                                                                            <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasNationality> "Swiss" .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/The_Dark_Knight
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/The_Dark_Knight> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Movies> ;
+                                                                                          <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasActor> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/George_Lucas> ;
+                                                                                          <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasDirector> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Steven_Speillberg> ;
+                                                                                          <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasGenre> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Action> ,
+                                                                                                                                                                             <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Thriller> ;
+                                                                                          <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasWriter> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/George_Lucas> ;
+                                                                                          <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasCountry> "Spain" ;
+                                                                                          <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasLanguage> "en"^^xsd:language ;
+                                                                                          <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasTitle> "The Dark Knight" ;
+                                                                                          <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasYear> "2001"^^xsd:int .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/The_Godfather
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/The_Godfather> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Movies> ;
+                                                                                        <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasActor> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Sofia_Coppola> ;
+                                                                                        <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasDirector> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Sofia_Coppola> ;
+                                                                                        <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasGenre> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Crime> ,
+                                                                                                                                                                           <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Drama> ;
+                                                                                        <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasWriter> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Sofia_Coppola> ;
+                                                                                        <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasCountry> "Germany" ;
+                                                                                        <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasLanguage> "de"^^xsd:language ;
+                                                                                        <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasTitle> "The Godfather" ;
+                                                                                        <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasYear> "2001"^^xsd:int .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/The_Matrix
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/The_Matrix> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Movies> ;
+                                                                                     <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasActor> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Wes_Anderson> ;
+                                                                                     <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasDirector> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Christopher_Nolan> ;
+                                                                                     <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasGenre> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Action> ,
+                                                                                                                                                                        <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Drama> ;
+                                                                                     <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasWriter> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Martin_Scorsese> ;
+                                                                                     <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasCountry> "United States" ;
+                                                                                     <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasLanguage> "en"^^xsd:language ;
+                                                                                     <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasTitle> "The Matrix" ;
+                                                                                     <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasYear> "2008"^^xsd:int .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Thriller
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Thriller> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Genre> .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Tim_Burton
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Tim_Burton> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Actor> ;
+                                                                                     <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasGender> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Male> ;
+                                                                                     <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasAge> "85"^^xsd:int ;
+                                                                                     <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasName> "Tim Burton" ;
+                                                                                     <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasNationality> "American" .
+
+
+###  http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Wes_Anderson
+<http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Wes_Anderson> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Actor> ;
+                                                                                       <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasGender> <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/Male> ;
+                                                                                       <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasAge> "56"^^xsd:int ;
+                                                                                       <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasName> "Wes Anderson" ;
+                                                                                       <http://www.semanticweb.org/future/ontologies/2024/4/untitled-ontology-2/hasNationality> "German" .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
